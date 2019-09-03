@@ -1,1 +1,2 @@
 # leetcode
+solution of golang
