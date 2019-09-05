@@ -6,12 +6,8 @@
 func searchInsert(nums []int, target int) int {
 	b := 0
 	e := len(nums) - 1
-	for {
-		if b > e {
-			return b
-		}
+	for b <= e {
 		mid := (b + e) / 2
-
 		if nums[mid] == target {
 			return mid
 		} else if nums[mid] < target {
@@ -20,5 +16,6 @@ func searchInsert(nums []int, target int) int {
 			e = mid - 1
 		}
 	}
+	return b
 }
 
