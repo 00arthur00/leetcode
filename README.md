@@ -2,6 +2,7 @@
 solution of golang
 # backtracing
 DFS+状态重置+剪枝
+结果可通过树状结构遍历得到,如排列组合问题(无剪枝操作),组合求和问题
 排列和组合的代码就差一行
 ``` golang
 func helper(nums, trace []int, output *[][]int) {
