@@ -7,7 +7,7 @@
 //从后往前找到第一个peek元素，然后反转，peek之后的元素，然后找到第一个比peek之前的元素大的元素，进行swap
 func nextPermutation(nums []int) {
 	index := findLastBackwardPeek(nums)
-	reverse(nums, index)
+	reverse(nums[index:len(nums)])
 	if index != 0 {
 		ans := index - 1
 		for i := index; i < len(nums); i++ {
@@ -18,8 +18,8 @@ func nextPermutation(nums []int) {
 		}
 	}
 }
-func reverse(nums []int, index int) {
-	for i, j := index, len(nums)-1; i < j; i, j = i+1, j-1 {
+func reverse(nums []int) {
+	for i, j := 0, len(nums)-1; i < j; i, j = i+1, j-1 {
 		nums[i], nums[j] = nums[j], nums[i]
 	}
 }
