@@ -4,11 +4,11 @@
  * [152] 乘积最大子序列
  */
 /*
-maxF(n) = max(n,n*maxF(n-1))
-minF(n) = min(n,n*minF(n-1))
 if n<0{
 	min,max = max,min
 }
+maxF(n) = max(n,n*maxF(n-1))
+minF(n) = min(n,n*minF(n-1))
 */
 func maxInt(a, b int) int {
 	if a < b {
