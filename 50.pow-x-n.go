@@ -4,6 +4,9 @@
  * [50] Pow(x, n)
  */
 func myPow(x float64, n int) float64 {
+	if n==0{
+		return 1.0
+	}
 	ans, m := 1.0, n
 	if n < 0 {
 		m = -n
@@ -15,10 +18,11 @@ func myPow(x float64, n int) float64 {
 			ans *= factor
 		}
 		factor *= factor
-		n = m / 2
+		m = m / 2
 	}
+	ans *=factor
 	if n < 0 {
-		return 1 / ans
+		return 1.0/ ans
 	}
 	return ans
 }
